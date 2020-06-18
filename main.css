@@ -1,0 +1,260 @@
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+    font-family: 'Josefin Sans', helvetica, arial, sans-serif;
+    font-weight: 400;
+		color: #fff;
+		margin:0;
+  }
+  h4{
+    font-size: 2em;
+    font-family: 'Josefin Sans', helvetica, arial, sans-serif;
+    font-weight: 400;
+		color: #fff;
+    margin:0;
+    text-align: left;
+    
+  }
+  hr{
+    border: 2px solid black;
+  }
+
+  .dark h1 {
+    color: black;
+  }
+
+  .socials {
+    text-align: left !important;
+    padding: 0vh 30vw;
+  }
+
+  .social_header {
+    padding-bottom: 1.5rem;
+  }
+
+  .socials h1:not(.social_header) {
+    padding-bottom: 1.2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-weight: 600;
+  }
+
+  .dark a {
+    color: rgba(0, 0, 0, 0.521) !important;
+    font-weight: bold;
+  }
+
+  a:hover, a:active {
+    color: rgba(0,0,0,0.5) !important;
+  }
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	#section0, #section1, #section2, #section3, #section4{
+    text-align:center;
+    align-content: center;
+    padding: 0px 10vw;
+  }
+
+  .alignleft {
+    float: left;
+    margin-left: 17%;
+  }
+  .alignright {
+    float: right;
+    margin-right: 17%;
+  }
+
+ 
+  /*-------*/
+
+  .box span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    margin: -4px;
+    animation: animate 2s infinite;
+  }
+  
+  .box span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .box span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+   
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 600px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+}
+
+  /* CARDS */
+/* ================================================================================= */
+.cards {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  overflow-x: scroll;
+  min-height: 100vh;
+}
+
+.card {
+  min-width: 215px;
+  max-width: 215px;
+  height: 400px;
+  margin-left: -80px;
+  border-radius: 40px;
+  padding: 30px;
+
+  box-shadow: -4px 4px 26px 2px hsla(184, 50%, 20%, .1);
+  background: linear-gradient(to right bottom, hsl(0, 0%, 98%), hsl(0, 0%, 96%));
+
+  transition: all .3s;
+  position: relative;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-20px)
+}
+
+.card:hover+.card,
+.card:focus-within+.card {
+  transform: translateX(80px);
+}
+
+.card-info {
+  margin-bottom: 14px;
+}
+
+.card-info>span:first-child {
+  margin-right: 6px;
+}
+
+.card-grad--video {
+  color: transparent;
+  background: linear-gradient(to right, hsl(91, 96%, 50%), hsl(159, 96%, 50%));
+  background-clip: text;
+}
+
+.card-grad--shot {
+  color: transparent;
+  background: linear-gradient(to right, hsl(294, 96%, 50%), hsl(201, 96%, 50%));
+  background-clip: text;
+}
+
+.card-info>span:last-child {
+  color: hsl(0, 0%, 70%);
+}
+
+.card-heading {
+  font-size: 1.6em;
+}
+
+.card-heading a:link {
+  color: hsl(30, 50%, 40%);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-tags {
+  display: flex;
+
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+
+.card-tag {
+  color: hsl(0, 0%, 60%);
+  padding: 5px 12px;
+  border: 2px solid hsl(30, 40%, 70%);
+  border-radius: 100px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: .9em;
+}
+
+/* ABS */
+/* ================================================================================= */
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.abs-profiles {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.abs-profiles a {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+
+#section3 {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+
